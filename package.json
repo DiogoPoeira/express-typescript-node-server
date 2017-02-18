@@ -9,6 +9,10 @@
     "grunt": "grunt",
     "start": "node server.js",
     "postinstall": "grunt"
+  },  
+  "engines": {
+    "node": "6.9.4",
+    "npm":"3.10.10"
   },
   "repository" :{
     "type" : "git",
