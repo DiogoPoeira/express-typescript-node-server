@@ -2,35 +2,36 @@
   "name": "nametyname",
   "version": "0.0.1",
   "description": "Not sure what this will be yet",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "SET NODE_ENV=development & concurrently \"npm run grunt-dev\" \"npm run dev-server\"",
     "dev-server": "nodemon server.js",
     "grunt-dev": "grunt dev",
-    "start": "node server.js",
+    "start": "SET NODE_ENV=production & node server.js",
     "postinstall": "grunt"
-  },  
+  },
   "engines": {
     "node": "6.9.4",
-    "npm":"3.10.10"
+    "npm": "3.10.10"
   },
-  "repository" :{
-    "type" : "git",
-    "url" : "https://github.com/DiogoPoeira/express-typescript-node-server.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DiogoPoeira/express-typescript-node-server.git"
   },
   "author": "Diogo Poeira",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^7.0.5",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
-    "morgan": "^1.7.0",
     "grunt": "^1.0.1",
     "grunt-cli": "0.1.13",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ts": "^6.0.0-beta.3",
     "grunt-tslint": "^4.0.1",
+    "morgan": "^1.7.0",
     "tslint": "^4.4.2",
     "typescript": "^2.0.8"
   },
