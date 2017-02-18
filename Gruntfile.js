@@ -27,20 +27,32 @@ module.exports = function(grunt) {
         }
       }
     },
+    tslint: {
+        options: {
+            configuration: "tslint.json",
+            force: true,
+            fix: false
+        },
+        files: {
+            src: ["src/\*\*/\*.ts", "!src/.baseDir.ts"]
+        }
+    },
     watch: {
       ts: {
         files: ["src/\*\*/\*.ts"],
-        tasks: ["ts"]
+        tasks: ["tslint","ts"]
       }
     }
   });
 
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-tslint");
   grunt.loadNpmTasks("grunt-ts");
 
   grunt.registerTask("default", [
     "copy",
+    "tslint",
     "ts",
     "watch"
   ]);

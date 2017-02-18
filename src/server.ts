@@ -16,25 +16,25 @@ export class Server {
   }
 
   constructor() {
-    //create expressjs application
+    // create expressjs application
     this.app = express();
 
-    //configure application
+    // configure application
     this.config();
 
-    //add routes
+    // add routes
     this.routes();
 
-    //add api
+    // add api
     this.api();
   }
 
   public api() {
-    let router : express.Router
+    let router: express.Router;
     router = express.Router();
     
     TestApi.create(router);
-    
+
     this.app.use(router);
   }
 

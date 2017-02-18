@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "SET NODE_ENV=development & concurrently \"npm run grunt\" \"npm run dev-server\"",
-    "dev-server":"nodemon server.js",
+    "dev-server": "nodemon server.js",
     "grunt": "grunt",
     "start": "node server.js",
     "postinstall": "grunt"
@@ -28,7 +28,9 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ts": "^6.0.0-beta.3",
+    "grunt-tslint": "^4.0.1",
     "nodemon": "^1.11.0",
+    "tslint": "^4.4.2",
     "typescript": "^2.0.8"
   }
 }

@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response, Router } from 'express';
 
-const TEST_DATA : Array<any> = [
+const TEST_DATA: Array<any> = [
   {
     name : 'Diogo',
     surname : 'Poeira',
@@ -18,12 +18,12 @@ const TEST_DATA : Array<any> = [
   },
 ]
 
-export class TestApi{
+export class TestApi {
 
   public static create(router: Router) {
 
     router.get('/', (req: Request, res: Response, next: NextFunction) => {
-      res.json({data:TEST_DATA});
+      res.json({data: TEST_DATA});
     });
   }
 
