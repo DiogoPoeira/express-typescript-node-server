@@ -50,11 +50,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-tslint");
   grunt.loadNpmTasks("grunt-ts");
 
-  grunt.registerTask("default", [
+  
+  grunt.registerTask("dev", [
     "copy",
     "tslint",
     "ts",
     "watch"
+  ]);
+
+  grunt.registerTask("default", [
+    "copy",
+    "ts"
   ]);
 
 };

@@ -4,9 +4,9 @@
   "description": "Not sure what this will be yet",
   "main": "index.js",
   "scripts": {
-    "dev": "SET NODE_ENV=development & concurrently \"npm run grunt\" \"npm run dev-server\"",
+    "dev": "SET NODE_ENV=development & concurrently \"npm run grunt-dev\" \"npm run dev-server\"",
     "dev-server": "nodemon server.js",
-    "grunt": "grunt",
+    "grunt-dev": "grunt dev",
     "start": "node server.js",
     "postinstall": "grunt"
   },  
